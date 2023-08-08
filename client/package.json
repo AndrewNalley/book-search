@@ -13,7 +13,12 @@
     "react-bootstrap": "^2.7.0",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "graphql": "^15.5.0",
+    "graphql-tag": "^2.11.0",
+    "@apollo/client": "^3.3.14",
+    "apollo-boost": "^0.4.9",
+    "apollo-client": "^2.6.10"
   },
   "scripts": {
     "start": "react-scripts start",
