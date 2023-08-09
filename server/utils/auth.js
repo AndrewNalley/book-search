@@ -1,12 +1,12 @@
 const jwt = require('jsonwebtoken');
 
 //put in env file for real project
-const secret = 'goodtimes';
+const secret = 'mysecretsshhhhh';
 const expiration = '2h';
 
 module.exports = {
     authMiddleware: function ({ req }) {
-        let token = req.headers.authorization;
+        let token = req.query.token || req.headers.authorization;
 
         if (req.headers.authorization) {
             token = token.split(' ').pop().trim();
@@ -22,7 +22,7 @@ module.exports = {
         } catch {
             console.error('Invalid token')
         }
-        next();
+        return req
     },
     signToken: function ({ username, email, _id }) {
         const payload = { username, email, _id }

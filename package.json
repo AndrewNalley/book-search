@@ -13,15 +13,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^5.1.0",
-    "apollo-server-express": "^3.6.1",
-    "express": "^4.17.2",
-    "graphql": "^16.2.0"
+    "concurrently": "^5.1.0"
   },
   "dependencies": {
-    "bcrypt": "^5.1.0",
-    "@apollo/client": "^3.7.17",
-    "@apollo/server": "^4.9.0",
-    "mongodb": "^5.7.0"
+    "@apollo/server": "^4.9.0"
   }
 }
