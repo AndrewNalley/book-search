@@ -1,9 +1,10 @@
 const jwt = require('jsonwebtoken');
 
-//put in env file for real project
+//token secret and expiry
 const secret = 'mysecretsshhhhh';
 const expiration = '2h';
 
+//authentication function
 module.exports = {
     authMiddleware: function ({ req }) {
         let token = req.query.token || req.headers.authorization;

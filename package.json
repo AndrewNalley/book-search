@@ -13,9 +13,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "concurrently": "^5.1.0"
   },
   "dependencies": {
-    "@apollo/server": "^4.9.0"
+    "@apollo/server": "^4.9.0",
+    "mongodb": "^5.7.0"
   }
 }
