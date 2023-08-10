@@ -42,12 +42,11 @@ const LoginForm = () => {
 
       Auth.login(response.data.login.token);
     } catch (err) {
-      console.error(error);
+      console.error(err);
       setShowAlert(true);
     }
 
     setUserFormData({
-      username: '',
       email: '',
       password: '',
     });
