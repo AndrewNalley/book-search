@@ -8,9 +8,6 @@ const resolvers = {
             if (context.user) {
                 return User.findOne({ _id: context.user._id })
             }
-        },
-        allUsers: async function (parent, args) {
-            return await User.find({})
         }
     },
     Mutation: {

@@ -1,9 +1,9 @@
 const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
+const { authMiddleware } = require('./utils/auth');
 const { typeDefs, resolvers } = require('./schemas')
 const db = require('./config/connection');
-const { authMiddleware } = require('./utils/auth');
 const app = express();
 const PORT = process.env.PORT || 3001;
 const server = new ApolloServer({
@@ -11,7 +11,7 @@ const server = new ApolloServer({
     resolvers,
     context: authMiddleware
 })
-
+// middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -23,7 +23,7 @@ if (process.env.NODE_ENV === 'production') {
     res.sendFile(path.join(__dirname, '../client/build/index.html'));
   });
 
-const startApolloServer = async () => {
+const startApolloServer = async (typeDefs, resolvers) => {
     await server.start()
     server.applyMiddleware({ app })
     db.once('open', () => {
