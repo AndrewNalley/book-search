@@ -21,9 +21,6 @@ Clone the repository at https://github.com/AndrewNalley/book-search
 
 Make sure to install all the npm packages!
 
-## Usage
-
-Visit: https://serene-wave-82911-1f89ea6eaf46.herokuapp.com/
 
 [screenshot](assets/images/screenshot.png)
 
